@@ -81,6 +81,13 @@ rule diamond_reads:
           --outfmt 6 qseqid sseqid pident qlen slen length mismatch gapopen qstart qend sstart send evalue bitscore
   """
 
+rule summarize_diamond:
+ input:
+  str(MAPPING_FP/'sbx_protein_alignment'/'{gene}'/'{sample}_1.m8')
+ output:
+  str(MAPPING_FP/'sbx_protein_alignment'/'{gene}'/'summary.tsv')
+ #some code here concatenating and massaging samples
+
 rule blastx_reads:
  input:
   read = str(MAPPING_FP/'R1'/'{sample}_1.fasta'),
