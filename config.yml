@@ -1,3 +1,6 @@
 sbx_protein_alignment:
   threads: 8
   genes_fp: "{PROJECT_FP}"/mapping/sbx_protein_alignment/database
+  evalue: 1e-5
+  alnLen: 30
+  mismatch: 3
