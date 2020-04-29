@@ -31,7 +31,7 @@ Take [**UniRef50** database](https://www.uniprot.org/downloads) as an example. F
  - Use diamond
  
   ```bash
-  sunbeam run --use-conda --configfile sunbeam_config.yml all_gene_family
+  sunbeam run --use-conda --configfile sunbeam_config.yml all_gene_clusters
   ```
 
 Note: --use-conda will instruct sunbeam/snakemake to use the sbx_gene_clusters_env.yml to properly install dependencies into a conda environment
