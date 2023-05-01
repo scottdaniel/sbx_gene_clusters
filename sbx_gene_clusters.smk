@@ -17,7 +17,7 @@ GENES_DIR = Cfg["sbx_gene_clusters"]["genes_fp"]
 GENES_KEY = [PurePath(f.name).stem for f in GENES_DIR.glob("*.fasta")]
 GENES_VAL = [str(GENES_DIR) + "/" + g + ".fasta" for g in GENES_KEY]
 GENES_DICT = dict(zip(GENES_KEY, GENES_VAL))
-print(f"sbx_gene_clusters::INFO Found these genes dbs: {str(GENES_DICT)}")
+#print(f"sbx_gene_clusters::INFO Found these genes dbs: {str(GENES_DICT)}")
 
 TARGET_GENES = expand(
     str(MAPPING_FP / "sbx_gene_clusters" / "{gene}" / "{sample}_1.txt"),
